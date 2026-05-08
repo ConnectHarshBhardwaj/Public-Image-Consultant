@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .gold-glow {
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .ticker-text {
+    white-space: nowrap;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+  }
+  .political-border {
+    border-left: 4px solid #B22222;
+  }
+}
