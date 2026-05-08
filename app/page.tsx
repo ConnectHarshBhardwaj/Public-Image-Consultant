@@ -5,7 +5,7 @@ import { CountersSection } from "@/components/CountersSection";
 import { ServicesSection } from "@/components/ServicesSection";
 import { HighAuthoritySection } from "@/components/HighAuthoritySection";
 import { AnimatedBanners } from "@/components/AnimatedBanners";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { MCDElectionsSection } from "@/components/MCDElectionsSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -20,7 +20,7 @@ export default function Home() {
       <HighAuthoritySection />
       <AnimatedBanners />
       <ServicesSection />
-      <TestimonialsSection />
+      <MCDElectionsSection />
       <ContactSection />
       <Footer />
       <FloatingWhatsApp />

@@ -11,7 +11,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              India’s Premier Political PR & Public Image Consultancy. Building authority and public trust.
+              Delhi’s Premier Political PR & Public Image Consultancy. Building authority and public trust.
             </p>
           </div>
 

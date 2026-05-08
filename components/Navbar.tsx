@@ -20,8 +20,7 @@ export function Navbar() {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'MCD 2027', href: '#mcd-elections' },
     { name: 'Contact', href: '#contact' },
   ];
 

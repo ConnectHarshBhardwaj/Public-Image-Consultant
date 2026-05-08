@@ -3,18 +3,12 @@ import { motion } from 'motion/react';
 import { Shield, TrendingUp, Megaphone, Share2, PenTool, Video, MessageSquare, AtSign, Globe, Lock, Crown, Users, Target } from 'lucide-react';
 
 const services = [
-  { icon: Shield, title: "Political PR", description: "Comprehensive public relations strategies tailored for political leaders and parties." },
-  { icon: Target, title: "Election Campaign Branding", description: "End-to-end branding solutions to create a powerful and recognizable election presence." }, // wait Target doesn't exist, I'll fix imports
-  { icon: Lock, title: "Reputation Management", description: "Proactive and reactive strategies to protect and enhance your public image." },
-  { icon: Megaphone, title: "Press Release Distribution", description: "Strategic distribution of press releases to national and regional media outlets." },
-  { icon: Share2, title: "Social Media Handling", description: "Expert management of official social media channels to maximize digital influence." },
-  { icon: PenTool, title: "Graphic Designing", description: "High-impact visual creatives for rallies, campaigns, and digital platforms." },
-  { icon: Video, title: "Professional Video Editing", description: "Cinematic political ads, speech highlights, and campaign video production." },
-  { icon: MessageSquare, title: "Speech Branding", description: "Crafting powerful narratives and memorable speeches that resonate with the masses." },
-  { icon: Globe, title: "Digital Campaign Gen.", description: "Data-driven digital marketing campaigns optimized for maximum voter outreach." },
-  { icon: Users, title: "Media Outreach", description: "Building strong relationships with journalists and media houses." },
-  { icon: Crown, title: "Public Figure Branding", description: "Elevating influencers and leaders into undeniable authorities in their domain." },
-  { icon: TrendingUp, title: "SEO & Visibility", description: "Dominating search engine results to maintain informational authority." }
+  { icon: Shield, title: "Political Image Engineering", description: "Strategic crafting and positioning of political personas to establish unshakeable authority and public trust across key demographics." },
+  { icon: Target, title: "Booth-Level Election Management", description: "Granular, data-driven voter mobilization and micro-targeting strategies executed flawlessly at the booth level for maximum electoral impact." },
+  { icon: Video, title: "Political Podcast & Digital Media Production", description: "High-end conceptualization and production of political podcasts, documentaries, and digital narratives to dominate modern media channels." },
+  { icon: Megaphone, title: "Local News Channel Collaborations", description: "Exclusive syndication and narrative control through strategic partnerships with regional and hyper-local media networks." },
+  { icon: Lock, title: "Confidential Political Survey Operations", description: "Discreet sentiment analysis, intelligence gathering, and pre-poll ground reality checks conducted with absolute operational secrecy." },
+  { icon: Share2, title: "Social Media & Public Influence Management", description: "Aggressive digital ecosystem domination, narrative warfare capabilities, and viral content engineering for political leaders." }
 ];
 
 export function ServicesSection() {
@@ -31,7 +25,7 @@ export function ServicesSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

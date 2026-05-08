@@ -39,9 +39,9 @@ export function ContactSection() {
                 </div>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">War Room / Office</div>
-                  <p className="text-lg text-white font-medium">
-                    Sanoth Village, Ghoga, Narela, <br/>Delhi, India
-                  </p>
+                  <a href="https://maps.app.goo.gl/xgfGFxtWkJELTAi17" target="_blank" rel="noopener noreferrer" className="text-lg text-white font-medium hover:text-[#D4AF37] transition-colors block">
+                    Near Senior Secondary School, <br/>Sanoth Village, Ghoga, Narela, Delhi
+                  </a>
                 </div>
               </div>
               
@@ -105,6 +105,24 @@ export function ContactSection() {
           </motion.div>
 
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-20 w-full h-[400px] rounded-2xl overflow-hidden border border-white/5 relative glass-card p-2"
+        >
+          <iframe
+            src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=Senior%20Secondary%20School,%20Sanoth%20village,%20Ghoga%20Narela%20Delhi+(Public%20Image%20Consultant)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+            width="100%"
+            height="100%"
+            style={{ border: 0, borderRadius: '0.75rem' }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="filter grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+          ></iframe>
+        </motion.div>
       </div>
     </section>
   );

@@ -13,8 +13,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Public Image Consultant | Indian Political PR Agency',
-  description: 'India’s Premier Political PR & Public Image Consultancy. We build authority, visibility, influence, and public trust for politicians, creators, public figures, and brands across India.',
+  title: 'Public Image Consultant | Delhi Political PR Agency',
+  description: 'Delhi’s Premier Political PR & Public Image Consultancy. We build authority, visibility, influence, and public trust for politicians, creators, public figures, and brands across Delhi.',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {

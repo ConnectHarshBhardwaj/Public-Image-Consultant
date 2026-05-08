@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function TickerLine() {
   const tickerItems = [
-    "India’s Next Generation Political PR Agency",
+    "Delhi’s Next Generation Political PR Agency",
     "•",
     "Building Powerful Public Images",
     "•",
@@ -15,7 +15,7 @@ export function TickerLine() {
     "•",
     "Strategic PR for Public Leaders",
     "•",
-    "Shaping Public Perception Across India",
+    "Shaping Public Perception Across Delhi",
     "•",
     "Where Politics Meets Media Strategy",
     "•",

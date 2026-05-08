@@ -27,13 +27,13 @@ export function HeroSection() {
           className="lg:w-3/5"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6 font-heading">
-            India&apos;s Premier <br className="hidden lg:block"/>
+            Delhi&apos;s Premier <br className="hidden lg:block"/>
             <span className="text-[#D4AF37]">Political PR</span> <br className="hidden lg:block"/>
             & Public Image Consultancy
           </h2>
 
           <p className="max-w-xl text-lg text-gray-400 mb-8 leading-relaxed">
-            We build authority, visibility, influence, and public trust for politicians, creators, public figures, and brands across India through elite media strategy.
+            We build authority, visibility, influence, and public trust for politicians, creators, public figures, and brands across Delhi through elite media strategy.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">

@@ -30,7 +30,7 @@ export function HighAuthoritySection() {
               Trusted by <span className="text-[#D4AF37]">Political Leaders</span> & Public Figures
             </h2>
             <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-              We operate at the highest level of Indian politics and public relations. Our strategies have secured victories, salvaged reputations, and built undeniable authority for the nation&apos;s most prominent figures.
+              We operate at the highest level of Delhi politics and public relations. Our strategies have secured victories, salvaged reputations, and built undeniable authority for the capital&apos;s most prominent figures.
             </p>
             
             <ul className="space-y-4 mb-10">
