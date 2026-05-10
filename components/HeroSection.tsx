@@ -1,30 +1,20 @@
 'use client';
 import { motion } from 'motion/react';
-import Image from 'next/image';
+import { BeforeAfterImage } from './BeforeAfterImage';
 
 export function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-[#050B18]">
       {/* Background Visual Overlay */}
-      <div className="absolute right-0 top-0 w-1/2 h-full opacity-20 pointer-events-none" style={{ background: 'radial-gradient(circle at center, #D4AF37 0%, transparent 70%)', filter: 'blur(80px)' }}></div>
-      <div className="absolute inset-0 z-0 opacity-10 mix-blend-overlay">
-        <Image 
-          src="https://picsum.photos/seed/political/1920/1080" 
-          alt="Political Campaign Background"
-          fill
-          className="object-cover"
-          priority
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#050B18] via-transparent to-transparent" />
-      </div>
+      <div className="absolute right-0 top-0 w-[80%] h-full opacity-10 pointer-events-none" style={{ background: 'radial-gradient(circle at center, #D4AF37 0%, transparent 60%)', filter: 'blur(100px)' }}></div>
+      <div className="absolute left-0 bottom-0 w-1/2 h-full opacity-10 pointer-events-none" style={{ background: 'radial-gradient(circle at bottom left, #B22222 0%, transparent 60%)', filter: 'blur(100px)' }}></div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex flex-col lg:flex-row items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="lg:w-3/5"
+          className="lg:w-1/2"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6 font-heading">
             Delhi&apos;s Premier <br className="hidden lg:block"/>
@@ -45,6 +35,15 @@ export function HeroSection() {
               <div className="text-[10px] text-gray-500 uppercase tracking-tighter leading-tight">Direct Media<br/>Hotline</div>
             </div>
           </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="lg:w-1/2 w-full max-w-xl mx-auto"
+        >
+          <BeforeAfterImage />
         </motion.div>
       </div>
     </section>

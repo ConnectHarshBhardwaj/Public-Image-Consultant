@@ -17,11 +17,12 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'MCD 2027', href: '#mcd-elections' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'MCD 2027', href: '/#mcd-elections' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -61,12 +62,12 @@ export function Navbar() {
             <a href="https://wa.me/919310868777" className="bg-[#25D366] hover:bg-[#20bd5a] transition-all text-white px-5 py-2 rounded-full text-xs font-bold flex items-center gap-2">
               WHATSAPP NOW
             </a>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="border border-[#D4AF37] text-[#D4AF37] px-5 py-2 rounded-full text-xs font-bold hover:bg-[#D4AF37] hover:text-[#050B18] transition-all"
             >
               BOOK CONSULTATION
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
