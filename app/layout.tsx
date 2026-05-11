@@ -17,6 +17,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: 'Hawk Strategies | Delhi Political PR Agency',
   description: 'Delhi’s Premier Political PR & Public Image Consultancy. We build authority, visibility, influence, and public trust for politicians, creators, public figures, and brands across Delhi.',
+  verification: {
+    google: 't6PnryPQ5h4mxUUs5RCl8bxPxti6efIfOfTFl-gjpJI',
+  },
   openGraph: {
     title: 'Hawk Strategies | Delhi Political PR Agency',
     description: 'Delhi’s Premier Political PR & Public Image Consultancy.',
