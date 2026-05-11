@@ -10,26 +10,31 @@ export function Footer() {
                 HAWK<span className="text-[#F28C28]">STRATEGIES</span>
               </span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-4">
               Delhi’s Leading Political Strategy & Consulting Agency. Building authority and public trust.
+            </p>
+            <p className="text-[#F28C28] text-xs font-bold uppercase tracking-widest">
+              "Crafting Political Influence Through Strategy & Leadership."
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-6">Quick Links</h4>
+            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-6">Services</h4>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-gray-400 hover:text-white transition-colors text-sm">Home</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-white transition-colors text-sm">Services</a></li>
-              <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors text-sm">Campaigns</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors text-sm">Contact Us</a></li>
+              <li><a href="/services/electoral-data-management" className="text-gray-400 hover:text-[#F28C28] transition-colors text-sm">Electoral Data Management</a></li>
+              <li><a href="/services/campaign-management" className="text-gray-400 hover:text-[#F28C28] transition-colors text-sm">Campaign Management</a></li>
+              <li><a href="/services/reputation-management" className="text-gray-400 hover:text-[#F28C28] transition-colors text-sm">Reputation Management</a></li>
+              <li><a href="/services/social-media-pr" className="text-gray-400 hover:text-[#F28C28] transition-colors text-sm">Social Media PR</a></li>
+              <li><a href="/services/media-coverage" className="text-gray-400 hover:text-[#F28C28] transition-colors text-sm">Media Coverage</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-6">Connect</h4>
+            <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-6">Contact & Connect</h4>
             <ul className="space-y-3">
-              <li className="text-gray-400 text-sm">Phone: <a href="tel:+919310868777" className="hover:text-white transition-colors">+91 93108 68777</a></li>
-              <li className="text-gray-400 text-sm">Location: Sanoth Village, Delhi</li>
+              <li className="text-gray-400 text-sm flex gap-2"><span className="text-[#F28C28]">P:</span> <a href="tel:+919310868777" className="hover:text-white transition-colors">+91 93108 68777</a></li>
+              <li className="text-gray-400 text-sm flex gap-2"><span className="text-[#F28C28]">A:</span> Sanoth Village, Delhi</li>
+              <li><a href="/contact" className="text-[#F28C28] hover:text-white transition-colors text-sm font-bold uppercase mt-4 block">Book Consultation &rarr;</a></li>
             </ul>
           </div>
 
@@ -37,11 +42,11 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} Hawk Strategies (HAWK STRATEGIES). All rights reserved.
+            © {new Date().getFullYear()} Hawk Strategies. All rights reserved.
           </p>
           <div className="text-gray-500 text-xs flex gap-4">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

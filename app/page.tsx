@@ -5,7 +5,6 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { HighAuthoritySection } from "@/components/HighAuthoritySection";
 import { AnimatedBanners } from "@/components/AnimatedBanners";
 import { MCDElectionsSection } from "@/components/MCDElectionsSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <AnimatedBanners />
       <ServicesSection />
       <MCDElectionsSection />
-      <TestimonialsSection />
       <ContactSection />
     </main>
   );

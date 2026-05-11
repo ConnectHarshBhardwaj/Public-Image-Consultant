@@ -19,10 +19,11 @@ export default function ServicesPage() {
             Precision-engineered public relations, narrative warfare, and digital ecosystem domination.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/political-campaign-management" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Campaign Management</Link>
-            <Link href="/reputation-management" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Reputation Management</Link>
-            <Link href="/social-media-pr" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Social Media PR</Link>
-            <Link href="/media-coverage" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Media Coverage</Link>
+            <Link href="/services/electoral-data-management" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Electoral Data Management</Link>
+            <Link href="/services/campaign-management" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Campaign Management</Link>
+            <Link href="/services/reputation-management" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Reputation Management</Link>
+            <Link href="/services/social-media-pr" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Social Media PR</Link>
+            <Link href="/services/media-coverage" className="text-xs uppercase tracking-widest text-[#F28C28] hover:text-white border border-[#F28C28]/30 px-4 py-2 rounded-full transition-colors">Media Coverage</Link>
           </div>
         </div>
       </div>

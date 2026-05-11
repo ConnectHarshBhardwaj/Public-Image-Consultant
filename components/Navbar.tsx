@@ -21,7 +21,6 @@ export function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'MCD 2027', href: '/#mcd-elections' },
-    { name: 'Case Studies', href: '/case-studies' },
     { name: 'Contact', href: '/contact' },
   ];
 
