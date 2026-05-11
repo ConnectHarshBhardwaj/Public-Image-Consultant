@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'motion/react';
-import Image from 'next/image';
 
 const targets = [
   "Emerging Leaders",
@@ -15,14 +14,12 @@ export function HighAuthoritySection() {
   return (
     <section className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#F28C28]/10 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-[#F28C28]/10 to-transparent pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10 text-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
@@ -33,7 +30,7 @@ export function HighAuthoritySection() {
               We provide elite political intelligence, ground-level strategy, and unparalleled media influence. Our operations are designed to build winning narratives and establish unshakeable leadership branding for top-tier political campaigns.
             </p>
             
-            <ul className="space-y-4 mb-10">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-10">
               {targets.map((target, idx) => (
                 <li key={idx} className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-[#F28C28] rounded-full shadow-[0_0_8px_rgba(242,140,40,0.8)]" />
@@ -42,33 +39,6 @@ export function HighAuthoritySection() {
               ))}
             </ul>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative h-[600px] w-full rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
-          >
-            <Image
-              src="https://picsum.photos/seed/leader/800/1200"
-              alt="Public Profile Authority"
-              fill
-              className="object-cover"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#030B17] via-[#030B17]/40 to-transparent" />
-            
-            <div className="absolute bottom-0 left-0 p-8 w-full">
-              <div className="backdrop-blur-md bg-white/5 border border-white/10 p-6 rounded-xl">
-                <div className="text-[#F28C28] text-sm font-bold uppercase tracking-widest mb-2">Campaign Success</div>
-                <h3 className="text-2xl font-heading font-bold text-white mb-2">National Election Strategy</h3>
-                <p className="text-gray-300 text-sm">Orchestrated a 360° digital and grassroots media campaign that shifted public perception by 40% in key demographics.</p>
-              </div>
-            </div>
-          </motion.div>
-
-        </div>
       </div>
     </section>
   );
