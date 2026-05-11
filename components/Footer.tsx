@@ -7,11 +7,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="font-heading font-black text-3xl tracking-tighter text-white">
-                P I <span className="text-[#F28C28]">C</span>
+                HAWK<span className="text-[#F28C28]">STRATEGIES</span>
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
-              Delhi’s Premier Political PR & Public Image Consultancy. Building authority and public trust.
+              Delhi’s Leading Political Strategy & Consulting Agency. Building authority and public trust.
             </p>
           </div>
 

@@ -37,13 +37,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center gap-3">
-              {/* Assuming uploaded logo is saved as hawk-logo.png in public folder */}
-              <img src="/hawk-logo.png" alt="Hawk Strategies Logo" className="h-12 w-auto object-contain" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling?.classList.remove('hidden'); }} />
-              <div className="hidden">
-                <h1 className="text-xl font-bold tracking-tight leading-none text-white uppercase font-heading">
-                  Hawk <span className="text-[#F28C28]">Strategies</span>
-                </h1>
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="flex items-center">
+                <span className="text-2xl sm:text-3xl font-black tracking-tighter leading-none text-white uppercase font-heading drop-shadow-[0_0_10px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all">
+                  HAWK<span className="text-[#F28C28] drop-shadow-[0_0_10px_rgba(242,140,40,0.4)]">STRATEGIES</span>
+                </span>
               </div>
             </Link>
           </div>
