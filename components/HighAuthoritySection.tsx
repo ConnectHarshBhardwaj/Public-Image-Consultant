@@ -3,19 +3,19 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 
 const targets = [
-  "Political Leaders",
-  "Influencers",
-  "Public Personalities",
-  "Social Leaders",
-  "Digital Creators",
-  "Corporate Brands"
+  "Emerging Leaders",
+  "Strategic Campaigns",
+  "Data-Driven Ground Tactics",
+  "High Impact Relations",
+  "Media Dominance",
+  "Leadership Branding"
 ];
 
 export function HighAuthoritySection() {
   return (
-    <section className="py-24 bg-[#050B18] relative overflow-hidden">
+    <section className="py-24 bg-[#0A0A0A] relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#B22222]/10 to-transparent pointer-events-none" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#F28C28]/10 to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -27,16 +27,16 @@ export function HighAuthoritySection() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black text-white mb-6 leading-tight">
-              Trusted by <span className="text-[#D4AF37]">Political Leaders</span> & Public Figures
+              Why Leaders Choose <span className="text-[#F28C28]">Hawk Strategies</span>
             </h2>
             <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-              We operate at the highest level of Delhi politics and public relations. Our strategies have secured victories, salvaged reputations, and built undeniable authority for the capital&apos;s most prominent figures.
+              We provide elite political intelligence, ground-level strategy, and unparalleled media influence. Our operations are designed to build winning narratives and establish unshakeable leadership branding for top-tier political campaigns.
             </p>
             
             <ul className="space-y-4 mb-10">
               {targets.map((target, idx) => (
                 <li key={idx} className="flex items-center gap-3">
-                  <div className="w-2 h-2 bg-[#D4AF37] rounded-full" />
+                  <div className="w-2 h-2 bg-[#F28C28] rounded-full shadow-[0_0_8px_rgba(242,140,40,0.8)]" />
                   <span className="text-white font-bold uppercase tracking-wider text-sm">{target}</span>
                 </li>
               ))}
@@ -61,7 +61,7 @@ export function HighAuthoritySection() {
             
             <div className="absolute bottom-0 left-0 p-8 w-full">
               <div className="backdrop-blur-md bg-white/5 border border-white/10 p-6 rounded-xl">
-                <div className="text-[#D4AF37] text-sm font-bold uppercase tracking-widest mb-2">Campaign Success</div>
+                <div className="text-[#F28C28] text-sm font-bold uppercase tracking-widest mb-2">Campaign Success</div>
                 <h3 className="text-2xl font-heading font-bold text-white mb-2">National Election Strategy</h3>
                 <p className="text-gray-300 text-sm">Orchestrated a 360° digital and grassroots media campaign that shifted public perception by 40% in key demographics.</p>
               </div>

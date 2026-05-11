@@ -7,7 +7,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <span className="font-heading font-black text-3xl tracking-tighter text-white">
-                P I <span className="text-[#D4AF37]">C</span>
+                P I <span className="text-[#F28C28]">C</span>
               </span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs">
@@ -37,7 +37,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} Public Image Consultant (PIC). All rights reserved.
+            © {new Date().getFullYear()} Hawk Strategies (HAWK STRATEGIES). All rights reserved.
           </p>
           <div className="text-gray-500 text-xs flex gap-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

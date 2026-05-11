@@ -12,7 +12,7 @@ const bannerTexts = [
 
 export function AnimatedBanners() {
   return (
-    <div className="w-full bg-[#B22222] py-3 flex overflow-hidden sticky bottom-0 z-40">
+    <div className="w-full bg-[#F28C28] py-3 flex overflow-hidden sticky bottom-0 z-40">
       <motion.div
         className="ticker-text text-sm uppercase flex gap-12 px-4 text-white items-center whitespace-nowrap"
         animate={{ x: [0, -1000] }}

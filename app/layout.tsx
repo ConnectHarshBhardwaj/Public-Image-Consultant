@@ -15,19 +15,19 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: 'Public Image Consultant | Delhi Political PR Agency',
+  title: 'Hawk Strategies | Delhi Political PR Agency',
   description: 'Delhi’s Premier Political PR & Public Image Consultancy. We build authority, visibility, influence, and public trust for politicians, creators, public figures, and brands across Delhi.',
   openGraph: {
-    title: 'Public Image Consultant | Delhi Political PR Agency',
+    title: 'Hawk Strategies | Delhi Political PR Agency',
     description: 'Delhi’s Premier Political PR & Public Image Consultancy.',
-    url: 'https://publicimageconsultant.in',
-    siteName: 'Public Image Consultant',
+    url: 'https://hawkstrategies.in',
+    siteName: 'Hawk Strategies',
     images: [
       {
-        url: 'https://publicimageconsultant.in/og-image.jpg',
+        url: 'https://hawkstrategies.in/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Public Image Consultant',
+        alt: 'Hawk Strategies',
       },
     ],
     locale: 'en_IN',
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Public Image Consultant | Delhi Political PR Agency',
+    title: 'Hawk Strategies | Delhi Political PR Agency',
     description: 'Delhi’s Premier Political PR & Public Image Consultancy.',
-    images: ['https://publicimageconsultant.in/og-image.jpg'],
+    images: ['https://hawkstrategies.in/og-image.jpg'],
   },
 };
 
@@ -45,10 +45,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Public Image Consultant',
-    image: 'https://publicimageconsultant.in/og-image.jpg',
-    '@id': 'https://publicimageconsultant.in',
-    url: 'https://publicimageconsultant.in',
+    name: 'Hawk Strategies',
+    image: 'https://hawkstrategies.in/og-image.jpg',
+    '@id': 'https://hawkstrategies.in',
+    url: 'https://hawkstrategies.in',
     telephone: '+919310868777',
     address: {
       '@type': 'PostalAddress',
@@ -73,7 +73,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased text-white bg-[#050B18] w-full min-h-screen" suppressHydrationWarning>
+      <body className="font-sans antialiased text-white bg-[#0A0A0A] w-full min-h-screen" suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />

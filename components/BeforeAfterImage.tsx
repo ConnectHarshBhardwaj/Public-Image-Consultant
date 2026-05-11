@@ -57,7 +57,7 @@ export function BeforeAfterImage() {
           draggable={false}
         />
         <div className="absolute top-4 right-4 bg-[#25D366]/90 backdrop-blur-sm text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full z-10 shadow-lg">
-          After PIC Strategy
+          After HAWK STRATEGIES Strategy
         </div>
       </div>
 
@@ -75,21 +75,21 @@ export function BeforeAfterImage() {
           referrerPolicy="no-referrer"
           draggable={false}
         />
-        <div className="absolute top-4 left-4 bg-[#B22222]/90 backdrop-blur-sm text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full shadow-lg whitespace-nowrap z-10">
+        <div className="absolute top-4 left-4 bg-[#F28C28]/90 backdrop-blur-sm text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full shadow-lg whitespace-nowrap z-10">
           Before Agency
         </div>
       </div>
 
       {/* Slider Handle */}
       <div 
-        className="absolute top-0 bottom-0 w-1 bg-[#D4AF37] cursor-ew-resize shadow-[0_0_15px_rgba(212,175,55,0.5)] z-20"
+        className="absolute top-0 bottom-0 w-1 bg-[#F28C28] cursor-ew-resize shadow-[0_0_15px_rgba(212,175,55,0.5)] z-20"
         style={{ left: `calc(${sliderPosition}% - 2px)` }}
       >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-[#050B18] border-2 border-[#D4AF37] rounded-full flex items-center justify-center shadow-xl">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-[#0A0A0A] border-2 border-[#F28C28] rounded-full flex items-center justify-center shadow-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F28C28" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-180 -ml-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F28C28" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="rotate-180 -ml-2">
             <polyline points="15 18 9 12 15 6"></polyline>
           </svg>
         </div>

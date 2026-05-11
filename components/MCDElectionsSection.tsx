@@ -27,17 +27,17 @@ const targets = [
 
 export function MCDElectionsSection() {
   return (
-    <section id="mcd-elections" className="py-24 bg-[#050B18] relative border-t border-white/5 overflow-hidden">
-      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#D4AF37]/5 to-transparent pointer-events-none" />
+    <section id="mcd-elections" className="py-24 bg-[#0A0A0A] relative border-t border-white/5 overflow-hidden">
+      <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#F28C28]/5 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#B22222]/10 border border-[#B22222]/30 mb-4"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F28C28]/10 border border-[#F28C28]/30 mb-4"
           >
-            <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#B22222]">Mission Critical</span>
+            <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#F28C28]">Mission Critical</span>
           </motion.div>
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export function MCDElectionsSection() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-5xl font-heading font-black text-white"
           >
-            MCD Elections <span className="text-[#D4AF37]">2027</span> Command Center
+            MCD Elections <span className="text-[#F28C28]">2027</span> Command Center
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -69,14 +69,14 @@ export function MCDElectionsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="glass-card p-8 rounded-xl relative group hover:border-[#D4AF37]/30 transition-all duration-300"
+                className="glass-card p-8 rounded-xl relative group hover:border-[#F28C28]/30 transition-all duration-300"
               >
                 <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 rounded-full bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0 text-[#D4AF37] group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 rounded-full bg-[#F28C28]/10 flex items-center justify-center flex-shrink-0 text-[#F28C28] group-hover:scale-110 transition-transform duration-300">
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold font-heading text-white mb-3 group-hover:text-[#D4AF37] transition-colors">{item.title}</h4>
+                    <h4 className="text-xl font-bold font-heading text-white mb-3 group-hover:text-[#F28C28] transition-colors">{item.title}</h4>
                     <p className="text-gray-400 leading-relaxed text-sm">
                       {item.description}
                     </p>

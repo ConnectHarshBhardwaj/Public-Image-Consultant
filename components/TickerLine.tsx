@@ -25,7 +25,7 @@ export function TickerLine() {
   const duplicatedItems = [...tickerItems, ...tickerItems];
 
   return (
-    <div className="w-full bg-[#D4AF37] text-[#050B18] py-2 flex overflow-hidden border-b border-black/20 relative z-10">
+    <div className="w-full bg-[#F28C28] text-[#0A0A0A] py-2 flex overflow-hidden border-b border-black/20 relative z-10">
       <motion.div
         className="flex gap-12 px-4 items-center"
         animate={{
