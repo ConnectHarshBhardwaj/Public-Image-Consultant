@@ -23,6 +23,13 @@ export default function BlogPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
             <div className="glass-card p-8 rounded-xl border border-white/5 hover:border-[#F28C28]/30 transition-all duration-300">
+              <div className="text-sm text-[#F28C28] font-bold tracking-widest mb-2 uppercase">May 18, 2024</div>
+              <h3 className="text-2xl font-bold text-white mb-4">How Social Media Campaigns Can Win Elections in 2026</h3>
+              <p className="text-gray-400 mb-6">A comprehensive guide on leveraging social media, AI, and strategic political branding to master digital warfare...</p>
+              <Link href="/blog/social-media-election-2026" className="text-sm font-bold text-white uppercase hover:text-[#F28C28] transition-colors">Read Full Intel →</Link>
+            </div>
+
+            <div className="glass-card p-8 rounded-xl border border-white/5 hover:border-[#F28C28]/30 transition-all duration-300">
               <div className="text-sm text-[#F28C28] font-bold tracking-widest mb-2 uppercase">May 15, 2024</div>
               <h3 className="text-2xl font-bold text-white mb-4">Navigating Anti-Incumbency Through Digital PR</h3>
               <p className="text-gray-400 mb-6">How algorithms and rapid narrative response units are changing the traditional mechanics of ward-level sentiment...</p>
