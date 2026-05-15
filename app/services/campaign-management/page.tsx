@@ -65,7 +65,7 @@ export default function PoliticalCampaignPage() {
           <div className="bg-white border border-[#1E3A8A]/10 shadow-sm p-8 md:p-12 rounded-xl text-center mb-24">
              <h2 className="text-3xl font-heading font-bold text-[#0B1A2E] mb-6">Built to Win.</h2>
              <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-               We don't accept standard campaigns. We run highly structured corporate-style political operations designed for maximum efficiency and electoral output.
+               We don&apos;t accept standard campaigns. We run highly structured corporate-style political operations designed for maximum efficiency and electoral output.
              </p>
              <Link href="/contact" className="inline-block bg-[#0B1A2E] text-white px-8 py-4 rounded-md font-bold tracking-wide uppercase hover:bg-[#1E3A8A] transition-all shadow-md">
                 Talk to a Strategist

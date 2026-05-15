@@ -108,7 +108,7 @@ export default function BlogPost() {
           </h1>
           
           <p className="text-xl text-gray-600 leading-relaxed font-light">
-            The era of handshake politics isn't over, but it has a new prerequisite: digital dominance. Here is the blueprint for engineering algorithmic victories.
+            The era of handshake politics isn&apos;t over, but it has a new prerequisite: digital dominance. Here is the blueprint for engineering algorithmic victories.
           </p>
         </div>
       </section>
@@ -123,13 +123,13 @@ export default function BlogPost() {
             <p className="text-gray-600 leading-relaxed mb-6">
               As we approach the 2026 electoral cycles, the mechanics of political influence have fundamentally shifted. Traditional <strong className="text-[#0B1A2E]">political campaign strategy</strong> relied heavily on ground mobilization, physical rallies, and broadcast television. While these elements remain crucial, they are now subordinate to the algorithmic battlefield. Social media is no longer an amplification tool; it is the primary arena where political narratives are born, weaponized, and resolved.
             </p>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              A robust <strong className="text-[#0B1A2E]">election social media strategy</strong> requires moving beyond basic posting schedules. It demands a systematic, sophisticated approach to data architecture, public perception management, and rapid-response narrative dominance. In India specifically, elections are won on the screens of millions of smartphones before a single ballot is cast.
+            <p className="text-gray-600 leading-relaxed mb-6">
+              A robust <strong className="text-[#0B1A2E]">election social media strategy</strong> requires moving beyond basic posting schedules. It demands a systematic, sophisticated approach to data architecture, public perception management, and rapid-response narrative dominance. In India specifically, elections are won on the screens of millions of smartphones before a single ballot is cast. For comprehensive guidance, consulting a leading <Link href="/" className="text-[#1E3A8A] font-bold hover:underline">PR Agency in Narela</Link> can provide the localized edge needed to dominate the digital landscape.
             </p>
 
             <blockquote className="border-l-4 border-[#1E3A8A] pl-6 py-2 my-12 bg-[#1E3A8A]/5 rounded-r-md">
               <p className="text-xl text-[#0B1A2E] font-serif italic m-0">
-                “In 2026, you don't just run for a constituency; you run for an algorithm. Visibility is authority.”
+                &ldquo;In 2026, you don&apos;t just run for a constituency; you run for an algorithm. Visibility is authority.&rdquo;
               </p>
             </blockquote>
 
@@ -142,7 +142,7 @@ export default function BlogPost() {
 
             <h3 className="text-2xl font-bold text-[#0B1A2E] mt-8 mb-4">2. Visual Hegemony on Instagram</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Instagram is the undisputed kingmaker for youth perception. The platform demands a distinct <strong className="text-[#0B1A2E]">political branding</strong> approach. It is not about policy papers; it is about aesthetics, mood, and perceived momentum. High-production 'behind-the-scenes' reels, aggressive typography over crowd shots, and perfectly timed music synchronization create an aura of inevitability around a leader.
+              Instagram is the undisputed kingmaker for youth perception. The platform demands a distinct <strong className="text-[#0B1A2E]">political branding</strong> approach. It is not about policy papers; it is about aesthetics, mood, and perceived momentum. High-production &apos;behind-the-scenes&apos; reels, aggressive typography over crowd shots, and perfectly timed music synchronization create an aura of inevitability around a leader.
             </p>
 
             <div className="bg-white border border-gray-200 p-8 rounded-sm my-12 shadow-lg">

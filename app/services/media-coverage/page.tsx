@@ -42,7 +42,7 @@ export default function MediaCoveragePage() {
                 Positive media visibility is not an accident; it is engineered. Hawk Strategies maintains an extensive network of relationships with journalists, editors, and producers across print, digital, and broadcast media.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                We don't just secure coverage; we shape the angle of the story. Whether you need strategic press release distribution, placements in leading national dailies, or prime-time TV visibility, our Media PR team ensures your message reaches the masses with authority.
+                We don&apos;t just secure coverage; we shape the angle of the story. Whether you need strategic press release distribution, placements in leading national dailies, or prime-time TV visibility, our Media PR team ensures your message reaches the masses with authority.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

@@ -14,7 +14,7 @@ export function Footer() {
               Delhi’s Leading Political Strategy & Consulting Agency. Building authority and public trust.
             </p>
             <p className="text-[#60A5FA] text-xs font-bold uppercase tracking-widest">
-              "Crafting Political Influence Through Strategy & Leadership."
+              &quot;Crafting Political Influence Through Strategy &amp; Leadership.&quot;
             </p>
           </div>
 

@@ -18,12 +18,12 @@ export function HeroSection() {
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight mb-6 font-heading text-[#0B1A2E]">
             Delhi&apos;s Leading <br className="hidden lg:block"/>
-            <span className="text-[#1E3A8A]">Political Strategy</span> <br className="hidden lg:block"/>
-            & Image Consulting Agency
+            <span className="text-[#1E3A8A]">PR Agency in Narela</span> <br className="hidden lg:block"/>
+            & Political Strategy Firm
           </h1>
 
           <p className="max-w-xl text-lg text-gray-600 mb-10 leading-relaxed font-medium">
-            We build powerful political brands, winning narratives, media influence, and digital dominance for leaders, parties, and public figures.
+            Based in Narela, Hawk Strategies builds powerful political brands, winning narratives, media influence, and digital dominance for leaders, parties, and public figures.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
@@ -47,11 +47,10 @@ export function HeroSection() {
           <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
           
           <Image
-            src="https://i.ibb.co/r2gCQnLK/gandhi-ji-image.jpg"
+            src="/gandhi-new.jpg"
             alt="Mahatma Gandhi Portrait"
             fill
             className="object-cover object-top mix-blend-multiply grayscale contrast-125 brightness-105"
-            referrerPolicy="no-referrer"
             priority
           />
         </motion.div>

@@ -22,8 +22,11 @@ export function ServicesSection() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div className="max-w-2xl">
             <h3 className="text-sm font-black text-[#1E3A8A] uppercase tracking-[0.3em] mb-4">Strategic Frameworks</h3>
-            <p className="text-4xl md:text-5xl font-extrabold font-heading text-[#0B1A2E]">Full-Spectrum Political Strategy</p>
+            <p className="text-4xl md:text-5xl font-extrabold font-heading text-[#0B1A2E]">Full-Spectrum Political Strategy & PR in Narela</p>
           </div>
+          <p className="text-gray-600 max-w-md md:hidden lg:block">
+            As the top PR Agency in Narela, we provide actionable intelligence and full-scale campaign management to dominate locally and nationally.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">

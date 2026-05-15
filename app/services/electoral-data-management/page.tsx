@@ -86,7 +86,7 @@ export default function ElectoralDataManagementPage() {
           <div className="bg-white border border-[#1E3A8A]/10 shadow-sm p-8 md:p-12 rounded-xl text-center">
              <h2 className="text-3xl font-heading font-bold text-[#0B1A2E] mb-6">Why Choose Hawk Strategies?</h2>
              <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-               Our data team comprises seasoned electoral analysts and political strategists who understand the subtle nuances of Indian politics. We don't just provide spreadsheets; we provide a strategic war room perspective that connects numbers to actual ground realities.
+               Our data team comprises seasoned electoral analysts and political strategists who understand the subtle nuances of Indian politics. We don&apos;t just provide spreadsheets; we provide a strategic war room perspective that connects numbers to actual ground realities.
              </p>
              <Link href="/contact" className="inline-block bg-[#0B1A2E] text-white px-8 py-4 rounded-md font-bold tracking-wide uppercase hover:bg-[#1E3A8A] transition-all shadow-md">
                 Equip Your War Room
