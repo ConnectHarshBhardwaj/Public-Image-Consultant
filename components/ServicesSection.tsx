@@ -16,13 +16,13 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-24 bg-[#0A0A0A] border-y border-white/5 relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] to-[#F28C28]/5 pointer-events-none" />
+    <section id="services" className="py-24 bg-[#FAFAFA] border-y border-gray-100 relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-[#1E3A8A]/5 pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
           <div className="max-w-2xl">
-            <h3 className="text-sm font-black text-[#F28C28] uppercase tracking-[0.3em] mb-4">Strategic Frameworks</h3>
-            <p className="text-4xl md:text-5xl font-extrabold font-heading text-white">Full-Spectrum Political Strategy</p>
+            <h3 className="text-sm font-black text-[#1E3A8A] uppercase tracking-[0.3em] mb-4">Strategic Frameworks</h3>
+            <p className="text-4xl md:text-5xl font-extrabold font-heading text-[#0B1A2E]">Full-Spectrum Political Strategy</p>
           </div>
         </div>
 
@@ -38,15 +38,15 @@ export function ServicesSection() {
                 transition={{ delay: index * 0.05, duration: 0.5 }}
                 className="group relative"
               >
-                <Link href={service.link} className="block p-6 md:p-8 rounded-sm bg-[#0A0A0A] border border-white/5 hover:border-[#F28C28] transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(242,140,40,0.15)] relative overflow-hidden flex flex-col h-full z-10 cursor-pointer">
-                  <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-[#F28C28]/20 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="w-12 h-12 mb-6 rounded-sm bg-white/5 flex items-center justify-center opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
-                    <Icon className="w-6 h-6 text-[#F28C28]" />
+                <Link href={service.link} className="block p-6 md:p-8 rounded-lg bg-white border border-gray-100 hover:border-[#1E3A8A]/30 transition-all duration-300 shadow-sm hover:shadow-lg relative overflow-hidden flex flex-col h-full z-10 cursor-pointer">
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-[#1E3A8A]/5 to-transparent rounded-bl-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="w-12 h-12 mb-6 rounded-md bg-[#FAFAFA] border border-gray-50 flex items-center justify-center opacity-80 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110">
+                    <Icon className="w-6 h-6 text-[#1E3A8A]" />
                   </div>
-                  <h4 className="font-bold text-lg md:text-xl text-white mb-3 group-hover:text-[#F28C28] transition-colors leading-tight">
+                  <h4 className="font-bold text-lg md:text-xl text-[#0B1A2E] mb-3 group-hover:text-[#1E3A8A] transition-colors leading-tight">
                     {service.title}
                   </h4>
-                  <p className="text-sm leading-relaxed text-gray-400 mt-auto">
+                  <p className="text-sm leading-relaxed text-gray-500 mt-auto">
                     {service.description}
                   </p>
                 </Link>

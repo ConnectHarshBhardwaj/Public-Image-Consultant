@@ -9,7 +9,7 @@ import { ContactSection } from "@/components/ContactSection";
 
 export default function Home() {
   return (
-    <main className="w-full relative selection:bg-[#F28C28] selection:text-black">
+    <main className="w-full relative selection:bg-[#1E3A8A] selection:text-white">
       <HeroSection />
       <TickerLine />
       <CountersSection />

@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import { Inter, Montserrat } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
@@ -9,7 +9,7 @@ const inter = Inter({
   variable: '--font-sans',
 });
 
-const montserrat = Montserrat({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-heading',
 });
@@ -69,14 +69,14 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable} scroll-smooth`}>
+    <html lang="en" className={`${inter.variable} ${jakarta.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased text-white bg-[#0A0A0A] w-full min-h-screen" suppressHydrationWarning>
+      <body className="font-sans antialiased text-[#111827] bg-[#FAFAFA] w-full min-h-screen" suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />

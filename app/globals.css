@@ -2,12 +2,13 @@
 
 @layer utilities {
   .gold-glow {
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.05); /* Premium soft shadow instead of gold */
   }
   .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
   }
   .ticker-text {
     white-space: nowrap;
@@ -15,6 +16,6 @@
     letter-spacing: 0.05em;
   }
   .political-border {
-    border-left: 4px solid #F28C28;
+    border-left: 4px solid #1E3A8A; /* Navy blue */
   }
 }

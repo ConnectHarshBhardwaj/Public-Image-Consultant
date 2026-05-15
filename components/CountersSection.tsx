@@ -47,7 +47,7 @@ export function CountersSection() {
   ];
 
   return (
-    <section className="bg-[#0A0A0A] border-y border-white/5 py-16 relative z-20">
+    <section className="bg-white border-y border-gray-100 py-16 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-left">
           {stats.map((stat, i) => (
@@ -57,12 +57,12 @@ export function CountersSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              className={`glass-card p-6 ${i % 2 === 0 ? 'political-border' : 'border-l-4 border-[#F28C28]'}`}
+              className={`bg-white p-6 rounded-lg border border-gray-100 shadow-sm hover:shadow-md transition-shadow ${i % 2 === 0 ? 'border-l-4 border-l-[#1E3A8A]' : 'border-l-4 border-l-gray-300'}`}
             >
-              <div className={`text-3xl lg:text-4xl font-bold mb-1 ${i === 0 ? 'text-[#F28C28]' : 'text-white'}`}>
+              <div className={`text-3xl lg:text-4xl font-bold mb-1 ${i === 0 ? 'text-[#1E3A8A]' : 'text-gray-900'}`}>
                 <AnimatedCounter target={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-400">
+              <div className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-500">
                 {stat.label}
               </div>
             </motion.div>
