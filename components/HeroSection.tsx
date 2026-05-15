@@ -47,10 +47,11 @@ export function HeroSection() {
           <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white to-transparent z-10 pointer-events-none"></div>
           
           <Image
-            src="/gandhi-new.jpg"
+            src="https://i.ibb.co/r2gCQnLK/gandhi-ji-image.jpg"
             alt="Mahatma Gandhi Portrait"
             fill
             className="object-cover object-top mix-blend-multiply grayscale contrast-125 brightness-105"
+            unoptimized
             priority
           />
         </motion.div>
