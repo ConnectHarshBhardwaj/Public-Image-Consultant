@@ -1,8 +1,17 @@
 'use client';
-import { motion } from 'motion/react';
-import { Phone, MapPin, Mail, Clock, Send } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Phone, MapPin, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 
 export function ContactSection() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setIsSubmitted(true);
+    form.reset();
+  };
   return (
     <section id="contact" className="py-24 bg-[#FAFAFA] relative border-y border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,39 +79,73 @@ export function ContactSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="p-8 md:p-10 rounded-xl relative border border-gray-100 bg-white shadow-xl"
+            className="p-8 md:p-10 rounded-xl relative border border-gray-100 bg-white shadow-xl flex flex-col justify-center min-h-[500px]"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-[#1E3A8A]/5 to-transparent rounded-bl-full pointer-events-none" />
-            <h3 className="text-3xl font-bold font-heading text-[#0B1A2E] mb-2">Campaign Discussion</h3>
-            <p className="text-gray-500 text-sm mb-6">Fill out the secure form to schedule a consultation with our strategy team.</p>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500">FullName / Designation</label>
-                <input type="text" className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="Enter details..." />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Phone Number</label>
-                <input type="tel" className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="+91..." />
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Service Required</label>
-                <select className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-gray-700 focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all appearance-none">
-                  <option value="">Select an option</option>
-                  <option value="election">Election Campaign Branding</option>
-                  <option value="reputation">Reputation Management</option>
-                  <option value="social">Social Media Handling</option>
-                  <option value="pr">General PR & Media</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Message (Optional)</label>
-                <textarea rows={4} className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all resize-none" placeholder="Briefly describe your objectives..."></textarea>
-              </div>
-              <button type="submit" className="w-full bg-[#0B1A2E] text-white font-bold uppercase tracking-wide py-4 rounded-md hover:bg-[#1E3A8A] transition-colors flex items-center justify-center gap-2 group shadow-md">
-                Submit Confidential Request
-                <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </form>
+            
+            <AnimatePresence mode="wait">
+              {isSubmitted ? (
+                <motion.div
+                  key="success"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  className="text-center py-12 flex flex-col items-center justify-center h-full"
+                >
+                  <div className="w-16 h-16 bg-green-100 text-[#25D366] rounded-full flex items-center justify-center mb-6 shadow-sm mx-auto">
+                    <CheckCircle2 className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-2xl font-bold font-heading text-[#0B1A2E] mb-3">Request Received</h3>
+                  <p className="text-gray-500 mb-8 max-w-[280px] leading-relaxed mx-auto">
+                    Your secure submission has been logged. Our strategy team will be in touch shortly.
+                  </p>
+                  <button
+                    onClick={() => setIsSubmitted(false)}
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-[#1E3A8A] text-[#1E3A8A] font-bold uppercase tracking-wide rounded-md hover:bg-[#1E3A8A] hover:text-white transition-colors"
+                  >
+                    Submit Another Request
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="form"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <h3 className="text-3xl font-bold font-heading text-[#0B1A2E] mb-2">Campaign Discussion</h3>
+                  <p className="text-gray-500 text-sm mb-6">Fill out the secure form to schedule a consultation with our strategy team.</p>
+                  <form className="space-y-6" onSubmit={handleSubmit}>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500">FullName / Designation</label>
+                      <input type="text" required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="Enter details..." />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Phone Number</label>
+                      <input type="tel" required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="+91..." />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Service Required</label>
+                      <select required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-gray-700 focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all appearance-none">
+                        <option value="">Select an option</option>
+                        <option value="election">Election Campaign Branding</option>
+                        <option value="reputation">Reputation Management</option>
+                        <option value="social">Social Media Handling</option>
+                        <option value="pr">General PR & Media</option>
+                      </select>
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Message (Optional)</label>
+                      <textarea rows={4} className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all resize-none" placeholder="Briefly describe your objectives..."></textarea>
+                    </div>
+                    <button type="submit" className="w-full bg-[#0B1A2E] text-white font-bold uppercase tracking-wide py-4 rounded-md hover:bg-[#1E3A8A] transition-colors flex items-center justify-center gap-2 group shadow-md">
+                      Submit Confidential Request
+                      <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                  </form>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
 
         </div>
