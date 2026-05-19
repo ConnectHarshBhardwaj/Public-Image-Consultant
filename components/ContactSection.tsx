@@ -19,16 +19,16 @@ export function ContactSection() {
 
     try {
       await addDoc(collection(db, 'contactForms'), {
-        fullName: formData.get('fullName'),
-        phoneNumber: formData.get('phoneNumber'),
-        serviceRequired: formData.get('serviceRequired'),
-        message: formData.get('message'),
+        fullName: formData.get('fullName')?.toString() || '',
+        phoneNumber: formData.get('phoneNumber')?.toString() || '',
+        serviceRequired: formData.get('serviceRequired')?.toString() || '',
+        message: formData.get('message')?.toString() || '',
         createdAt: serverTimestamp(),
       });
       setIsSubmitted(true);
       form.reset();
-    } catch (e) {
-      console.error("Error adding document: ", e);
+    } catch (error) {
+      console.error("Error adding document: ", error);
       alert("Failed to submit form. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -160,7 +160,7 @@ export function ContactSection() {
                       <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Message (Optional)</label>
                       <textarea name="message" rows={4} className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all resize-none" placeholder="Briefly describe your objectives..."></textarea>
                     </div>
-                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#0B1A2E] text-white font-bold uppercase tracking-wide py-4 rounded-md hover:bg-[#1E3A8A] transition-colors flex items-center justify-center gap-2 group shadow-md disabled:bg-opacity-70">
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#0B1A2E] text-white font-bold uppercase tracking-wide py-4 rounded-md hover:bg-[#1E3A8A] transition-colors flex items-center justify-center gap-2 group shadow-md disabled:bg-opacity-70 disabled:cursor-not-allowed">
                       {isSubmitting ? 'Submitting...' : 'Submit Confidential Request'}
                       <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
