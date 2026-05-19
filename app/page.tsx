@@ -6,6 +6,9 @@ import { HighAuthoritySection } from "@/components/HighAuthoritySection";
 import { AnimatedBanners } from "@/components/AnimatedBanners";
 import { MCDElectionsSection } from "@/components/MCDElectionsSection";
 import { ContactSection } from "@/components/ContactSection";
+import { FAQSection } from "@/components/FAQSection";
+import { MapSection } from "@/components/MapSection";
+import { TimelineSection } from "@/components/TimelineSection";
 
 export default function Home() {
   return (
@@ -16,7 +19,10 @@ export default function Home() {
       <HighAuthoritySection />
       <AnimatedBanners />
       <ServicesSection />
+      <TimelineSection />
+      <MapSection />
       <MCDElectionsSection />
+      <FAQSection />
       <ContactSection />
     </main>
   );

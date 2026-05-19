@@ -1,9 +1,10 @@
-import { Metadata } from 'next';
-import { ContactSection } from '@/components/ContactSection';
+import { Metadata } from "next";
+import { ContactSection } from "@/components/ContactSection";
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Hawk Strategies Delhi',
-  description: 'Get in touch with Delhi\'s elite political PR and public image consulting agency.',
+  title: "Contact Us | Hawk Strategies Delhi",
+  description:
+    "Get in touch with Delhi's elite political PR and public image consulting agency.",
 };
 
 export default function ContactPage() {

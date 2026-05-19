@@ -1,50 +1,90 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-
-export const metadata: Metadata = {
-  title: 'Political War Room Insights (Blog) | Hawk Strategies',
-  description: 'Expert insights, strategies, and analysis on political PR and election campaign management from Delhi’s leading agency.',
-};
+import { ContactSection } from "@/components/ContactSection";
+import Link from "next/link";
 
 export default function BlogPage() {
+  const posts = [
+    {
+      category: "Election Strategy",
+      title: "Why Traditional Rallies Are Losing Impact in 2024",
+      date: "Nov 12, 2023",
+      readTime: "5 min read",
+      author: "Strategy Desk",
+    },
+    {
+      category: "Digital Warfare",
+      title: "The Anatomy of a Viral Political Campaign",
+      date: "Oct 28, 2023",
+      readTime: "8 min read",
+      author: "Media Team",
+    },
+    {
+      category: "Public Relations",
+      title: "Damage Control: Navigating A Crisis in 24 Hours",
+      date: "Sep 15, 2023",
+      readTime: "6 min read",
+      author: "PR Division",
+    },
+    {
+      category: "Branding",
+      title: "Crafting the Statesman: Visual Identity in Politics",
+      date: "Aug 02, 2023",
+      readTime: "7 min read",
+      author: "Brand Studio",
+    },
+  ];
+
   return (
-    <main className="w-full relative pt-20 min-h-screen">
-      <div className="py-24 bg-[#FAFAFA]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1E3A8A]/5 border border-[#1E3A8A]/20 mb-8">
-            <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#1E3A8A]">War Room Dispatches</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-black text-[#0B1A2E] font-heading mb-6 tracking-tight">
-            Our <span className="text-[#1E3A8A]">Insights</span>
+    <main className="w-full relative selection:bg-[#1E3A8A] selection:text-white pt-24 min-h-screen bg-[#FAFAFA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="mb-16">
+          <h1 className="text-5xl md:text-7xl font-black font-heading text-[#0B1A2E] mb-4 uppercase tracking-tight">
+            Intelligence <span className="text-[#1E3A8A]">Briefings</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-16">
-            Strategic literature and tactical breakdowns on modern political warfare and public perception.
+          <p className="text-xl text-gray-500 max-w-2xl">
+            Insights, methodology, and analysis from our war room to your desk.
           </p>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left">
-            <div className="bg-white p-8 rounded-xl border border-gray-100 hover:border-[#1E3A8A]/30 shadow-sm transition-all duration-300">
-              <div className="text-sm text-[#1E3A8A] font-bold tracking-widest mb-2 uppercase">May 18, 2024</div>
-              <h3 className="text-2xl font-bold text-[#0B1A2E] mb-4">How Social Media Campaigns Can Win Elections in 2026</h3>
-              <p className="text-gray-500 mb-6">A comprehensive guide on leveraging social media, AI, and strategic political branding to master digital warfare...</p>
-              <Link href="/blog/social-media-election-2026" className="text-sm font-bold text-[#1E3A8A] uppercase hover:text-[#0B1A2E] transition-colors">Read Full Intel →</Link>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl border border-gray-100 hover:border-[#1E3A8A]/30 shadow-sm transition-all duration-300">
-              <div className="text-sm text-[#1E3A8A] font-bold tracking-widest mb-2 uppercase">May 15, 2024</div>
-              <h3 className="text-2xl font-bold text-[#0B1A2E] mb-4">Navigating Anti-Incumbency Through Digital PR</h3>
-              <p className="text-gray-500 mb-6">How algorithms and rapid narrative response units are changing the traditional mechanics of ward-level sentiment...</p>
-              <Link href="#" className="text-sm font-bold text-[#1E3A8A] uppercase hover:text-[#0B1A2E] transition-colors">Read Full Intel →</Link>
-            </div>
-            
-            <div className="bg-white p-8 rounded-xl border border-gray-100 hover:border-[#1E3A8A]/30 shadow-sm transition-all duration-300">
-              <div className="text-sm text-[#1E3A8A] font-bold tracking-widest mb-2 uppercase">May 10, 2024</div>
-              <h3 className="text-2xl font-bold text-[#0B1A2E] mb-4">The New Standard for MCD Declarations</h3>
-              <p className="text-gray-500 mb-6">A framework for establishing authority locally before making your official political bid, emphasizing high-production media...</p>
-              <Link href="#" className="text-sm font-bold text-[#1E3A8A] uppercase hover:text-[#0B1A2E] transition-colors">Read Full Intel →</Link>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {posts.map((post, i) => (
+            <article
+              key={i}
+              className="bg-white p-8 border border-gray-200 rounded-xl hover:shadow-xl transition-all duration-300 group cursor-pointer"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-xs font-bold uppercase tracking-widest text-[#1E3A8A]">
+                  {post.category}
+                </span>
+                <span className="text-xs text-gray-400 font-medium">
+                  &bull;
+                </span>
+                <span className="text-xs text-gray-400 font-medium">
+                  {post.readTime}
+                </span>
+              </div>
+              <h2 className="text-2xl font-bold font-heading text-[#0B1A2E] mb-4 group-hover:text-[#1E3A8A] transition-colors line-clamp-2">
+                {post.title}
+              </h2>
+              <div className="flex items-center justify-between mt-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-500">
+                      {post.author.charAt(0)}
+                    </span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-sm font-bold text-gray-700">
+                      {post.author}
+                    </span>
+                    <span className="text-xs text-gray-500">{post.date}</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
+      <ContactSection />
     </main>
   );
 }

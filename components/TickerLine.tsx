@@ -1,5 +1,5 @@
-'use client';
-import { motion } from 'motion/react';
+"use client";
+import { motion } from "motion/react";
 
 export function TickerLine() {
   const tickerItems = [
@@ -41,7 +41,7 @@ export function TickerLine() {
           <span
             key={index}
             className={`ticker-text text-xs uppercase ${
-              item === '•' ? 'opacity-50' : ''
+              item === "•" ? "opacity-50" : ""
             }`}
           >
             {item}

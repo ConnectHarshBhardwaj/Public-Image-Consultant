@@ -1,8 +1,9 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Hawk Strategies',
-  description: 'Privacy policy and data protection guidelines for Hawk Strategies clients and operatives.',
+  title: "Privacy Policy | Hawk Strategies",
+  description:
+    "Privacy policy and data protection guidelines for Hawk Strategies clients and operatives.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -14,9 +15,19 @@ export default function PrivacyPolicyPage() {
             Privacy <span className="text-[#1E3A8A]">Policy</span>
           </h1>
           <div className="prose prose-p:text-gray-600 max-w-none">
-            <p>At Hawk Strategies, operational secrecy and client confidentiality are our foundational tenets. This Privacy Policy details how we handle information acquired during our strategic engagements.</p>
-            <h2 className="text-[#1E3A8A] mt-8 font-bold text-2xl mb-4">Confidentiality of Political Data</h2>
-            <p>All polling data, sentiment analyses, and internal communications shared with our agency are sealed beneath strict Non-Disclosure Agreements. We never syndicate strategic information.</p>
+            <p>
+              At Hawk Strategies, operational secrecy and client confidentiality
+              are our foundational tenets. This Privacy Policy details how we
+              handle information acquired during our strategic engagements.
+            </p>
+            <h2 className="text-[#1E3A8A] mt-8 font-bold text-2xl mb-4">
+              Confidentiality of Political Data
+            </h2>
+            <p>
+              All polling data, sentiment analyses, and internal communications
+              shared with our agency are sealed beneath strict Non-Disclosure
+              Agreements. We never syndicate strategic information.
+            </p>
           </div>
         </div>
       </div>

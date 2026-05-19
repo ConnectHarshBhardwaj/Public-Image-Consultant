@@ -1,8 +1,9 @@
-import { Metadata } from 'next';
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Hawk Strategies',
-  description: 'Terms of service and operational agreements for Hawk Strategies.',
+  title: "Terms & Conditions | Hawk Strategies",
+  description:
+    "Terms of service and operational agreements for Hawk Strategies.",
 };
 
 export default function TermsPage() {
@@ -14,9 +15,19 @@ export default function TermsPage() {
             Terms & <span className="text-[#1E3A8A]">Conditions</span>
           </h1>
           <div className="prose prose-p:text-gray-600 max-w-none">
-            <p>By engaging with Hawk Strategies, you agree to our strategic operational guidelines designed to ensure mutual success and absolute operational integrity.</p>
-            <h2 className="text-[#1E3A8A] mt-8 font-bold text-2xl mb-4">Operational Integrity</h2>
-            <p>We execute PR architectures with extreme prejudice towards achieving election goals, operating strictly within ethical and legal boundaries of Indian campaign law.</p>
+            <p>
+              By engaging with Hawk Strategies, you agree to our strategic
+              operational guidelines designed to ensure mutual success and
+              absolute operational integrity.
+            </p>
+            <h2 className="text-[#1E3A8A] mt-8 font-bold text-2xl mb-4">
+              Operational Integrity
+            </h2>
+            <p>
+              We execute PR architectures with extreme prejudice towards
+              achieving election goals, operating strictly within ethical and
+              legal boundaries of Indian campaign law.
+            </p>
           </div>
         </div>
       </div>

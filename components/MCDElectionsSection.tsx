@@ -1,33 +1,40 @@
-'use client';
-import { motion } from 'motion/react';
-import { Target, Users, MapPin, Trophy } from 'lucide-react';
+"use client";
+import { motion } from "motion/react";
+import { Target, Users, MapPin, Trophy } from "lucide-react";
 
 const targets = [
   {
     icon: Users,
     title: "Delhi Politicians & Corporators",
-    description: "Solidify your local dominance. We build narratives that resonate with diverse wards, turning anti-incumbency into unparalleled public support."
+    description:
+      "Solidify your local dominance. We build narratives that resonate with diverse wards, turning anti-incumbency into unparalleled public support.",
   },
   {
     icon: Target,
     title: "New Election Candidates",
-    description: "Enter the battlefield with an established image. We engineer instant credibility and high-voltage visibility for first-time challengers."
+    description:
+      "Enter the battlefield with an established image. We engineer instant credibility and high-voltage visibility for first-time challengers.",
   },
   {
     icon: Trophy,
     title: "Youth Leaders",
-    description: "Mobilize the demographic dividend. Our digital warfare and viral media strategies convert internet engagement into actual booth-level votes."
+    description:
+      "Mobilize the demographic dividend. Our digital warfare and viral media strategies convert internet engagement into actual booth-level votes.",
   },
   {
     icon: MapPin,
     title: "MCD 2027 Campaigns",
-    description: "End-to-end election intelligence. From ward-level micro-targeting to confidental survey operations, we architect undeniable victories."
-  }
+    description:
+      "End-to-end election intelligence. From ward-level micro-targeting to confidental survey operations, we architect undeniable victories.",
+  },
 ];
 
 export function MCDElectionsSection() {
   return (
-    <section id="mcd-elections" className="py-24 bg-white relative border-y border-gray-100 overflow-hidden">
+    <section
+      id="mcd-elections"
+      className="py-24 bg-white relative border-y border-gray-100 overflow-hidden"
+    >
       <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-[#1E3A8A]/5 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
@@ -37,16 +44,19 @@ export function MCDElectionsSection() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1E3A8A]/5 border border-[#1E3A8A]/20 mb-4"
           >
-            <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#1E3A8A]">Mission Critical</span>
+            <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#1E3A8A]">
+              Mission Critical
+            </span>
           </motion.div>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-5xl font-heading font-black text-[#0B1A2E]"
           >
-            MCD Elections <span className="text-[#1E3A8A]">2027</span> Command Center
+            MCD Elections <span className="text-[#1E3A8A]">2027</span> Command
+            Center
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +65,9 @@ export function MCDElectionsSection() {
             transition={{ delay: 0.2 }}
             className="text-gray-600 text-lg mt-6 max-w-2xl mx-auto"
           >
-            The battle for Delhi has begun. We are actively inducting elite political candidates to engineer decisive victories across all 250 municipal wards.
+            The battle for Delhi has begun. We are actively inducting elite
+            political candidates to engineer decisive victories across all 250
+            municipal wards.
           </motion.p>
         </div>
 
@@ -76,7 +88,9 @@ export function MCDElectionsSection() {
                     <Icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold font-heading text-[#0B1A2E] mb-3 group-hover:text-[#1E3A8A] transition-colors">{item.title}</h4>
+                    <h4 className="text-xl font-bold font-heading text-[#0B1A2E] mb-3 group-hover:text-[#1E3A8A] transition-colors">
+                      {item.title}
+                    </h4>
                     <p className="text-gray-600 leading-relaxed text-sm">
                       {item.description}
                     </p>

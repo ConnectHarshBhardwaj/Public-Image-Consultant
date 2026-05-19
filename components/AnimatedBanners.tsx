@@ -1,5 +1,5 @@
-'use client';
-import { motion } from 'motion/react';
+"use client";
+import { motion } from "motion/react";
 
 const bannerTexts = [
   "YOUR IMAGE IS YOUR POWER",
@@ -7,7 +7,7 @@ const bannerTexts = [
   "PR IS THE NEW POLITICAL WEAPON",
   "WE BUILD DIGITAL AUTHORITY",
   "INFLUENCE THE MASSES",
-  "STRATEGY • MEDIA • POWER • IMPACT"
+  "STRATEGY • MEDIA • POWER • IMPACT",
 ];
 
 export function AnimatedBanners() {
