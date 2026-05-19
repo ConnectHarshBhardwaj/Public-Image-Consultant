@@ -1,81 +1,66 @@
-import { ContactSection } from "@/components/ContactSection";
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function BlogPage() {
   const posts = [
     {
-      category: "Election Strategy",
-      title: "Why Traditional Rallies Are Losing Impact in 2024",
+      category: "Market Insights",
+      title: "Why Narela is Delhi's Next Big Real Estate Boom",
       date: "Nov 12, 2023",
       readTime: "5 min read",
-      author: "Strategy Desk",
+      author: "Investment Desk",
     },
     {
-      category: "Digital Warfare",
-      title: "The Anatomy of a Viral Political Campaign",
+      category: "Infrastructure",
+      title: "Impact of Upcoming Metro Phase IV on Property Prices",
       date: "Oct 28, 2023",
       readTime: "8 min read",
-      author: "Media Team",
+      author: "Market Research",
     },
     {
-      category: "Public Relations",
-      title: "Damage Control: Navigating A Crisis in 24 Hours",
+      category: "Buying Guide",
+      title: "DDA Flats in Narela: Complete Buying & Allotment Guide",
       date: "Sep 15, 2023",
       readTime: "6 min read",
-      author: "PR Division",
+      author: "Legal Team",
     },
     {
-      category: "Branding",
-      title: "Crafting the Statesman: Visual Identity in Politics",
+      category: "Commercial",
+      title: "Top Commercial Pockets for Retail Investment in Narela",
       date: "Aug 02, 2023",
       readTime: "7 min read",
-      author: "Brand Studio",
-    },
+      author: "Commercial Division",
+    }
   ];
 
   return (
-    <main className="w-full relative selection:bg-[#1E3A8A] selection:text-white pt-24 min-h-screen bg-[#FAFAFA]">
+    <main className="w-full relative selection:bg-[#d4af37] selection:text-[#0F172A] pt-24 min-h-screen bg-[#0F172A]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="mb-16">
-          <h1 className="text-5xl md:text-7xl font-black font-heading text-[#0B1A2E] mb-4 uppercase tracking-tight">
-            Intelligence <span className="text-[#1E3A8A]">Briefings</span>
-          </h1>
-          <p className="text-xl text-gray-500 max-w-2xl">
-            Insights, methodology, and analysis from our war room to your desk.
+          <span className="text-[#d4af37] font-bold uppercase tracking-widest text-sm mb-2 block">Market Reports</span>
+          <h1 className="text-5xl md:text-7xl font-black font-heading text-white mb-4 uppercase tracking-tight">Real Estate <span className="gold-gradient">Insights</span></h1>
+          <p className="text-xl text-gray-400 max-w-2xl font-light">
+            Latest trends, investment guides, and infrastructure updates from Narela and surrounding areas.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {posts.map((post, i) => (
-            <article
-              key={i}
-              className="bg-white p-8 border border-gray-200 rounded-xl hover:shadow-xl transition-all duration-300 group cursor-pointer"
-            >
+            <article key={i} className="bg-[#1e293b] p-8 border border-[#d4af37]/20 rounded-xl hover:shadow-[0_10px_30px_rgba(212,175,55,0.1)] hover:border-[#d4af37]/50 transition-all duration-300 group cursor-pointer">
               <div className="flex items-center gap-4 mb-4">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#1E3A8A]">
-                  {post.category}
-                </span>
-                <span className="text-xs text-gray-400 font-medium">
-                  &bull;
-                </span>
-                <span className="text-xs text-gray-400 font-medium">
-                  {post.readTime}
-                </span>
+                <span className="text-xs font-bold uppercase tracking-widest text-[#d4af37]">{post.category}</span>
+                <span className="text-xs text-gray-500 font-medium">&bull;</span>
+                <span className="text-xs text-gray-500 font-medium">{post.readTime}</span>
               </div>
-              <h2 className="text-2xl font-bold font-heading text-[#0B1A2E] mb-4 group-hover:text-[#1E3A8A] transition-colors line-clamp-2">
+              <h2 className="text-2xl font-bold font-heading text-white mb-4 group-hover:text-[#d4af37] transition-colors line-clamp-2">
                 {post.title}
               </h2>
               <div className="flex items-center justify-between mt-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                    <span className="text-xs font-bold text-gray-500">
-                      {post.author.charAt(0)}
-                    </span>
+                  <div className="w-10 h-10 bg-[#0F172A] border border-[#d4af37]/30 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold text-[#d4af37]">{post.author.charAt(0)}</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-sm font-bold text-gray-700">
-                      {post.author}
-                    </span>
+                    <span className="text-sm font-bold text-gray-300">{post.author}</span>
                     <span className="text-xs text-gray-500">{post.date}</span>
                   </div>
                 </div>
@@ -84,7 +69,6 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
-      <ContactSection />
     </main>
   );
 }

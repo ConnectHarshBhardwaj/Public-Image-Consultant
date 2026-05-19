@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -10,31 +10,31 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
 });
 
 export const metadata: Metadata = {
   title:
-    "Hawk Strategies | Top PR Agency in Narela, Delhi | Political Strategy",
+    "Invest In Narela | Premium Real Estate & Property Dealer in Delhi",
   description:
-    "Looking for a top PR Agency in Narela, Delhi? Hawk Strategies is Delhi’s premier Political PR & Public Image Consultancy offering brand management, political strategy, and reputation management.",
+    "Find your dream property in Narela. Invest In Narela is the premier real estate platform for luxury residential, commercial, and investment properties in Delhi.",
   verification: {
     google: "t6PnryPQ5h4mxUUs5RCl8bxPxti6efIfOfTFl-gjpJI",
   },
   openGraph: {
-    title: "Hawk Strategies | Top PR Agency in Narela, Delhi",
+    title: "Invest In Narela | Property Deals in Narela",
     description:
-      "Looking for a top PR Agency in Narela, Delhi? Hawk Strategies is Delhi’s premier Political PR & Public Image Consultancy.",
-    url: "https://hawkstrategies.in",
-    siteName: "Hawk Strategies",
+      "Find your dream property in Narela. We offer premium residential and commercial properties.",
+    url: "https://investinnarela.in",
+    siteName: "Invest In Narela",
     images: [
       {
-        url: "https://hawkstrategies.in/og-image.jpg",
+        url: "https://investinnarela.in/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hawk Strategies - PR Agency in Narela",
+        alt: "Invest In Narela - Real Estate",
       },
     ],
     locale: "en_IN",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hawk Strategies | Top PR Agency in Narela, Delhi",
-    description: "Delhi’s Premier Political PR & Public Image Consultancy.",
-    images: ["https://hawkstrategies.in/og-image.jpg"],
+    title: "Invest In Narela | Premium Real Estate",
+    description: "Delhi’s Premier Property Platform in Narela.",
+    images: ["https://investinnarela.in/og-image.jpg"],
   },
 };
 
@@ -55,32 +55,32 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Hawk Strategies",
-    image: "https://hawkstrategies.in/og-image.jpg",
-    "@id": "https://hawkstrategies.in",
-    url: "https://hawkstrategies.in",
+    "@type": "RealEstateAgent",
+    name: "Invest In Narela",
+    image: "https://investinnarela.in/og-image.jpg",
+    "@id": "https://investinnarela.in",
+    url: "https://investinnarela.in",
     telephone: "+919310868777",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Near Senior Secondary School, Sanoth Village",
-      addressLocality: "Ghoga, Narela",
+      streetAddress: "Invest In Narela HQ, Near Metro",
+      addressLocality: "Narela",
       addressRegion: "Delhi",
       addressCountry: "IN",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 28.8291,
-      longitude: 77.0673,
+      latitude: 28.8428,
+      longitude: 77.0906,
     },
     description:
-      "Looking for a PR Agency in Narela, Delhi? Hawk Strategies is Delhi’s premier Political PR & Public Image Consultancy. We build authority, visibility, influence, and public trust for politicians, creators, public figures, and brands across Delhi.",
+      "Invest In Narela is your trusted property partner for buying, selling, and investing in residential and commercial properties in Narela, Delhi.",
   };
 
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${jakarta.variable} scroll-smooth`}
+      className={`${inter.variable} ${playfair.variable} scroll-smooth`}
     >
       <head>
         <script
@@ -89,7 +89,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className="font-sans antialiased text-[#111827] bg-[#FAFAFA] w-full min-h-screen"
+        className="font-sans antialiased text-[#1A1A1A] bg-[#FAFAFA] w-full min-h-screen"
         suppressHydrationWarning
       >
         <Navbar />

@@ -1,21 +1,19 @@
 @import "tailwindcss";
 
 @layer utilities {
+  .gold-gradient {
+    background: linear-gradient(135deg, #B8860B 0%, #E8B923 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gold-gradient-bg {
+    background: linear-gradient(135deg, #B8860B 0%, #E8B923 50%, #B8860B 100%);
+  }
   .gold-glow {
-    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.05); /* Premium soft shadow instead of gold */
+    text-shadow: 0 4px 20px rgba(184, 134, 11, 0.3);
   }
-  .glass-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-  }
-  .ticker-text {
-    white-space: nowrap;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-  }
-  .political-border {
-    border-left: 4px solid #1E3A8A; /* Navy blue */
+  .luxury-border {
+    border-left: 2px solid #D4AF37;
   }
 }
+
