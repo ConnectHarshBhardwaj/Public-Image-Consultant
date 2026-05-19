@@ -1,0 +1,35 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global Safety Net
+    match /{document=**} {
+      // Default deny all
+      allow read, write: if false;
+    }
+
+    // Validation definitions
+    function isValidContactForm(data) {
+      return data.keys().hasAll(['fullName', 'phoneNumber', 'serviceRequired', 'createdAt']) &&
+        data.fullName is string && data.fullName.size() > 0 && data.fullName.size() <= 100 &&
+        data.phoneNumber is string && data.phoneNumber.size() > 0 && data.phoneNumber.size() <= 20 &&
+        data.serviceRequired is string && data.serviceRequired.size() > 0 && data.serviceRequired.size() <= 50 &&
+        (!('message' in data) || (data.message is string && data.message.size() <= 1000));
+    }
+    
+    // Auth Definition
+    function isSignedIn() { return request.auth != null; }
+
+    match /contactForms/{formId} {
+      // Anyone can create a form submission, even if not logged in.
+      allow create: if isValidContactForm(request.resource.data)
+        // Ensure timestamp is server time
+        && request.resource.data.createdAt == request.time;
+      
+      // Only read or manipulate if admin (No user login setup currently, so we'll 
+      // rely on Firebase Console access for the admin side or set up explicit rules later)
+      // Disabling read, update, delete for regular clients.
+      allow read, update, delete: if false;
+    }
+  }
+}

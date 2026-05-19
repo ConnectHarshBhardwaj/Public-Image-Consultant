@@ -2,15 +2,37 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Phone, MapPin, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { db } from '../lib/firebase';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    setIsSubmitted(true);
-    form.reset();
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    const formData = new FormData(form);
+
+    try {
+      await addDoc(collection(db, 'contactForms'), {
+        fullName: formData.get('fullName'),
+        phoneNumber: formData.get('phoneNumber'),
+        serviceRequired: formData.get('serviceRequired'),
+        message: formData.get('message'),
+        createdAt: serverTimestamp(),
+      });
+      setIsSubmitted(true);
+      form.reset();
+    } catch (e) {
+      console.error("Error adding document: ", e);
+      alert("Failed to submit form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   return (
     <section id="contact" className="py-24 bg-[#FAFAFA] relative border-y border-gray-100">
@@ -118,15 +140,15 @@ export function ContactSection() {
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-widest text-gray-500">FullName / Designation</label>
-                      <input type="text" required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="Enter details..." />
+                      <input name="fullName" type="text" required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="Enter details..." />
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Phone Number</label>
-                      <input type="tel" required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="+91..." />
+                      <input name="phoneNumber" type="tel" required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all" placeholder="+91..." />
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Service Required</label>
-                      <select required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-gray-700 focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all appearance-none">
+                      <select name="serviceRequired" required className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-gray-700 focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all appearance-none">
                         <option value="">Select an option</option>
                         <option value="election">Election Campaign Branding</option>
                         <option value="reputation">Reputation Management</option>
@@ -136,10 +158,10 @@ export function ContactSection() {
                     </div>
                     <div className="space-y-2">
                       <label className="text-xs font-bold uppercase tracking-widest text-gray-500">Message (Optional)</label>
-                      <textarea rows={4} className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all resize-none" placeholder="Briefly describe your objectives..."></textarea>
+                      <textarea name="message" rows={4} className="w-full bg-[#FAFAFA] border border-gray-200 rounded-md px-4 py-3 text-[#0B1A2E] focus:outline-none focus:border-[#1E3A8A] focus:ring-1 focus:ring-[#1E3A8A] transition-all resize-none" placeholder="Briefly describe your objectives..."></textarea>
                     </div>
-                    <button type="submit" className="w-full bg-[#0B1A2E] text-white font-bold uppercase tracking-wide py-4 rounded-md hover:bg-[#1E3A8A] transition-colors flex items-center justify-center gap-2 group shadow-md">
-                      Submit Confidential Request
+                    <button type="submit" disabled={isSubmitting} className="w-full bg-[#0B1A2E] text-white font-bold uppercase tracking-wide py-4 rounded-md hover:bg-[#1E3A8A] transition-colors flex items-center justify-center gap-2 group shadow-md disabled:bg-opacity-70">
+                      {isSubmitting ? 'Submitting...' : 'Submit Confidential Request'}
                       <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </form>

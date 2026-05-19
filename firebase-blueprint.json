@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "ContactForm": {
+      "title": "ContactForm",
+      "description": "User submitted contact form",
+      "type": "object",
+      "properties": {
+        "fullName": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "serviceRequired": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "any"
+        }
+      },
+      "required": ["fullName", "phoneNumber", "serviceRequired"]
+    }
+  },
+  "firestore": {
+    "contactForms/{formId}": {
+      "schema": "ContactForm",
+      "description": "Form submissions made by users on the website"
+    }
+  }
+}
